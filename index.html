@@ -10,9 +10,9 @@
       height: 100%;
       width: 100%;
       font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
       background: #000;
-      color: white;
     }
 
     /* Particle Background */
@@ -32,38 +32,28 @@
     }
 
     header {
-      padding: 50px 20px 20px;
+      padding: 30px 20px 10px;
     }
 
-    /* Logo Styling */
-    .logo {
-      max-width: 180px;
-      margin-bottom: 20px;
-      border-radius: 50%;
-      box-shadow: 0 0 25px rgba(255,0,255,0.8);
-      animation: logo-glow 5s linear infinite;
-    }
-    @keyframes logo-glow {
-      0%   { box-shadow: 0 0 25px #ff0000; }
-      25%  { box-shadow: 0 0 25px #00ff00; }
-      50%  { box-shadow: 0 0 25px #0000ff; }
-      75%  { box-shadow: 0 0 25px #ff00ff; }
-      100% { box-shadow: 0 0 25px #ff0000; }
-    }
-
-    /* RGB Glow Title */
-    .glow-title {
-      font-size: 3rem;
-      font-weight: bold;
+    header img {
+      width: 140px;
+      height: auto;
       margin-bottom: 15px;
-      animation: rgb-glow 5s linear infinite;
     }
-    @keyframes rgb-glow {
-      0%   { text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000; color:#ff0000; }
-      25%  { text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00; color:#00ff00; }
-      50%  { text-shadow: 0 0 15px #0000ff, 0 0 30px #0000ff; color:#0000ff; }
-      75%  { text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff; color:#ff00ff; }
-      100% { text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000; color:#ff0000; }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #fff, 0 0 20px #7289da, 0 0 30px #00ffea;
+      animation: rgbGlow 5s linear infinite;
+    }
+
+    @keyframes rgbGlow {
+      0% {color: #ff0000; text-shadow: 0 0 15px #ff0000;}
+      25% {color: #00ff00; text-shadow: 0 0 15px #00ff00;}
+      50% {color: #0000ff; text-shadow: 0 0 15px #0000ff;}
+      75% {color: #ff00ff; text-shadow: 0 0 15px #ff00ff;}
+      100% {color: #ff0000; text-shadow: 0 0 15px #ff0000;}
     }
 
     p {
@@ -74,26 +64,26 @@
     }
 
     .section {
-      background: rgba(0, 0, 0, 0.4); /* Transparent black background */
+      background: transparent;  /* Transparent so background shows */
       margin: 20px auto;
       padding: 20px;
       border-radius: 12px;
       max-width: 900px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 0 12px rgba(255,255,255,0.05);
+      color: white;
     }
 
     .typing {
       font-size: 2rem;
       font-weight: bold;
+      border-right: 2px solid white;
       white-space: nowrap;
       overflow: hidden;
       display: inline-block;
-    }
-
-    .typing span {
-      border-right: 2px solid white;
       animation: blink 0.7s infinite;
     }
+
     @keyframes blink {
       0% { border-color: white; }
       50% { border-color: transparent; }
@@ -119,7 +109,7 @@
       margin-top: 40px;
       padding: 15px;
       font-size: 0.9rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #ccc;
     }
   </style>
 </head>
@@ -129,18 +119,18 @@
 
   <header>
     <!-- Server Logo -->
-    <img src="https://cdn.discordapp.com/icons/1408751091491016840/86895d59136e91a9dd846e3323f4b8a8.png?size=1024" 
-         alt="Void Core Logo" class="logo">
-
-    <h1 class="glow-title">Void Core Services</h1>
-    <p>Welcome to <b>Void Core Services 🌌</b></p>
+    <a href="https://discord.gg/HzxbaPgF8w" target="_blank">
+      <img src="https://cdn.discordapp.com/icons/1408751091491016840/86895d59136e91a9dd846e3323f4b8a8.png?size=1024" alt="Void Core Logo">
+    </a>
+    <h1>Void Core Services</h1>
+    <p>Welcome to <b>Void Core Services</b> 🌌</p>
   </header>
 
   <!-- About Section -->
   <div class="section">
-    <h2 class="typing"><span id="typing-text"></span></h2>
+    <h2 class="typing" id="typing-text"></h2>
     <p>
-      Void Core Services provide <b>free MCFA (lifetime)</b> and more like 
+      Void Core Services provide <b>free MCFA (lifetime)</b> and a lot more like 
       <b>Xbox, Steam accounts</b>. <br>
       We provide our best service and our staff are kind people who will help you with whatever you need.
     </p>
@@ -158,13 +148,11 @@
   <!-- Owner Section -->
   <div class="section">
     <h2>OWNER</h2>
-    <p>
-      <b>.aaravog</b>
-    </p>
+    <p><b>.aaravog</b></p>
   </div>
 
   <!-- Discord Button -->
-  <a href="https://discord.gg/HzxbaPgF8w" target="_blank" rel="noopener noreferrer" class="btn">Join Our Discord</a>
+  <a href="https://discord.gg/HzxbaPgF8w" target="_blank" class="btn">Join Our Discord</a>
 
   <footer>
     &copy; 2025 Void Core Services | All Rights Reserved
